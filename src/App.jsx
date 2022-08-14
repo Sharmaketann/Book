@@ -7,30 +7,35 @@ import {GlobalStyle} from './styles'
 
 const App = () => {
   const [books, setBooks] = useState([])
+  const [selectedBook, setSelectedBook] = useState(null)
 
+  //Fetch data of all books.
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch('https://book-club-json.herokuapp.com/books')
-        console.log(`here's what our fetch response request returns`, response)
-
         const books = await response.json()
-        console.log(`our jsonified response: `, books)
         setBooks(books)
       } catch (errors) {
         console.log(errors)
       }
     }
-
     fetchData()
   }, [])
 
-  console.log(`the books array in our state:`, books)
+  // Helper function when user clicks on a book
+
+  const pickBook = (book) => {
+    setSelectedBook(book)
+  }
+
+  console.log(selectedBook)
+
   return (
     <div>
       <GlobalStyle />
       <Header />
-      <BooksContainer books={books} />
+      <BooksContainer books={books} pickBook={pickBook} />
     </div>
   )
 }
