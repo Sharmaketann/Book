@@ -89,3 +89,12 @@ export const CloseWrapper = styled.div`
     right: 20px;
   }
 `
+export const BG = styled.div`
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+`
