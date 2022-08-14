@@ -1,6 +1,7 @@
 import React from 'react'
 import {useEffect} from 'react'
 import {useState} from 'react'
+import BooksContainer from './components/Books'
 
 const App = () => {
   const [books, setBooks] = useState([])
@@ -23,7 +24,11 @@ const App = () => {
   }, [])
 
   console.log(`the books array in our state:`, books)
-  return <div>Hello World</div>
+  return (
+    <div>
+      <BooksContainer books={books} />
+    </div>
+  )
 }
 
 export default App
