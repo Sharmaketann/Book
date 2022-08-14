@@ -1,13 +1,14 @@
 import React from 'react'
+import {Container, Cover, Title, Author} from './styles'
 
 const Book = ({book}) => (
-  <figure>
-    <img alt={`Book cover for ${book.title} by ${book.author}`} src={book.image} />
+  <Container>
+    <Cover alt={`Book cover for ${book.title} by ${book.author}`} src={book.image} />
     <figcaption>
-      <h3>{book.title}</h3>
-      <h4>{book.author}</h4>
+      <Title>{book.title}</Title>
+      <Author>by {book.author}</Author>
     </figcaption>
-  </figure>
+  </Container>
 )
 
 export default Book

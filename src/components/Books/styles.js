@@ -25,7 +25,6 @@ export const BookList = styled.div`
   grid-column-gap: 40px;
   grid-row-gap: 120px;
   margin-top: 40px;
-  max-width: 1200px;
 
   @media (max-width: 1200px) {
     grid-template-columns: repeat(3, 1fr);
@@ -34,6 +33,10 @@ export const BookList = styled.div`
 
   @media (max-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+  }
+  @media (max-width: 440px) {
+    grid-template-columns: repeat(1, 1fr);
     grid-column-gap: 20px;
   }
 `
