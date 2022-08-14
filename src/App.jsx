@@ -38,7 +38,7 @@ const App = () => {
     <div>
       <GlobalStyle />
       <Header />
-      <BooksContainer books={books} pickBook={pickBook} />
+      <BooksContainer books={books} pickBook={pickBook} isPanelOpen={selectedBook !== null} />
       {selectedBook && <DetailPanel book={selectedBook} closePanel={closePanel} />}
     </div>
   )
