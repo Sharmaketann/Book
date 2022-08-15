@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {Pill} from '../../styles'
 
 export const Panel = styled.article`
   background-color: #ffe581;
@@ -36,7 +37,7 @@ export const Em = styled.em`
   font-style: italic;
 `
 
-export const CloseWrapper = styled.div`
+export const CloseWrapper = styled(Pill)`
   display: ${({$state}) => ($state === 'entered' ? 'flex' : 'none')};
   cursor: pointer;
   top: 120px;
